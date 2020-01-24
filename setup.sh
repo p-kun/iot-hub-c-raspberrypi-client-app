@@ -3,7 +3,7 @@ sh -c '
 #On Raspbian Stretch we need to install old libssl (1.02 to be exact)
 sudo apt-get update
 sudo apt-get purge -y libssl-dev
-sudo apt-get install -y libssl1.0-dev git cmake build-essential curl libcurl4-openssl-dev uuid-dev
+sudo apt-get install -y libssl-dev git cmake build-essential curl libcurl4-openssl-dev uuid-dev
 
 #On Raspbian Stretch precompiled sdk from ppa is no good. Lets compile it manually
 cd ~
@@ -71,7 +71,7 @@ else
     echo "cmake version check pass (current:$CMAKE_VER,require:$CMAKE_LEAST)"
 fi
 
-git clone git://git.drogon.net/wiringPi
+git clone https://github.com/hardkernel/wiringPi
 cd ./wiringPi
 ./build
 cd ..
