@@ -71,7 +71,7 @@ else
     echo "cmake version check pass (current:$CMAKE_VER,require:$CMAKE_LEAST)"
 fi
 
-git clone git@github.com:WiringPi/WiringPi.git wiringPi
+git clone https://github.com/WiringPi/WiringPi.git wiringPi
 cd ./wiringPi
 ./build
 cd ..
